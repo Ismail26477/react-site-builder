@@ -18,7 +18,7 @@ export default function Home() {
             <span className="tag tag-primary"><Sparkles size={12} style={{ verticalAlign: "middle" }} /> India's #1 college discovery</span>
             <h1 className="h1" style={{ marginTop: 24 }}>Find Your <span style={{ color: "var(--primary-2)" }}>Dream</span><br />Engineering College</h1>
             <p className="muted" style={{ marginTop: 20, fontSize: 18, maxWidth: 520 }}>
-              Compare 100+ colleges in seconds. Book a free expert session and walk in with clarity.
+              Compare 100+ colleges in seconds. Book a free expert session today and walk in with clarity, not confusion.
             </p>
             <div style={{ marginTop: 32, display: "flex", gap: 16, flexWrap: "wrap" }}>
               <Link to="/compare" className="btn-primary">Compare Colleges <ArrowRight size={16} /></Link>
