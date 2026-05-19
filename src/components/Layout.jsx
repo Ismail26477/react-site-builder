@@ -1,24 +1,28 @@
-import { NavLink, Link } from "react-router-dom";
 import { Compass, MessageSquare, Mail, MapPin } from "lucide-react";
 
 const WHATSAPP_NUMBER = "919999999999";
 const WHATSAPP_MESSAGE = "Hi CareerCompass! I'd like to book a free expert session and get help choosing my engineering college.";
 export const WHATSAPP_URL = `https://wa.me/${WHATSAPP_NUMBER}?text=${encodeURIComponent(WHATSAPP_MESSAGE)}`;
 
+const scrollTo = (id) => (e) => {
+  e.preventDefault();
+  document.getElementById(id)?.scrollIntoView({ behavior: "smooth", block: "start" });
+};
+
 export function Navbar() {
   return (
     <header className="nav">
       <div className="nav-inner">
-        <Link to="/" className="logo">
+        <a href="#home" onClick={scrollTo("home")} className="logo">
           <span className="logo-icon"><Compass size={18} color="#fff" /></span>
           CareerCompass
-        </Link>
+        </a>
         <nav className="nav-links">
-          <NavLink to="/" end>Home</NavLink>
-          <NavLink to="/compare">Compare</NavLink>
-          <NavLink to="/book">Book</NavLink>
+          <a href="#home" onClick={scrollTo("home")}>Home</a>
+          <a href="#compare" onClick={scrollTo("compare")}>Compare</a>
+          <a href="#book" onClick={scrollTo("book")}>Book</a>
         </nav>
-        <Link to="/book" className="btn-primary nav-cta">Book Free Session</Link>
+        <a href="#book" onClick={scrollTo("book")} className="btn-primary nav-cta">Book Free Session</a>
       </div>
     </header>
   );
@@ -38,9 +42,9 @@ export function Footer() {
         <div>
           <h4 style={{ color: "var(--muted)", margin: "0 0 14px", fontSize: 11, letterSpacing: ".2em" }}>QUICK LINKS</h4>
           <div style={{ display: "grid", gap: 10, fontSize: 14 }}>
-            <Link to="/">Home</Link>
-            <Link to="/compare">Compare</Link>
-            <Link to="/book">Book Session</Link>
+            <a href="#home" onClick={scrollTo("home")}>Home</a>
+            <a href="#compare" onClick={scrollTo("compare")}>Compare</a>
+            <a href="#book" onClick={scrollTo("book")}>Book Session</a>
           </div>
         </div>
         <div>
