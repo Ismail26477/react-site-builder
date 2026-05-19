@@ -1,4 +1,4 @@
-import { Link } from "react-router-dom";
+const Link = ({ to, children, ...p }) => { const id = to.replace("/", "") || "home"; return <a href={"#" + id} onClick={e => { e.preventDefault(); document.getElementById(id)?.scrollIntoView({ behavior: "smooth" }); }} {...p}>{children}</a>; };
 import { ArrowRight, Sparkles, Star } from "lucide-react";
 
 const testimonials = [
