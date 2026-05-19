@@ -39,7 +39,7 @@ export default function Compare() {
       <div className="container">
         <h1 className="h2" style={{ textAlign: "center" }}>Compare Colleges Side by Side</h1>
         <p className="muted" style={{ textAlign: "center", marginTop: 12, maxWidth: 600, margin: "12px auto 0" }}>
-          Select any 2 colleges and instantly see how they stack up.
+          Select any 2 colleges and instantly see how they stack up — fees, placements, rankings, the whole picture.
         </p>
 
         <div className="row" style={{ marginTop: 48 }}>

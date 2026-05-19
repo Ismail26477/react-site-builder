@@ -15,7 +15,7 @@ export default function Home() {
       <section className="hero">
         <div className="container" style={{ display: "grid", gap: 48, gridTemplateColumns: "1fr 1fr", alignItems: "center" }}>
           <div>
-            <span className="tag tag-primary"><Sparkles size={12} style={{ verticalAlign: "middle" }} /> India's #1 college discovery</span>
+            <span className="tag tag-primary"><Sparkles size={12} style={{ verticalAlign: "middle" }} /> India's #1 college discovery for 12th science</span>
             <h1 className="h1" style={{ marginTop: 24 }}>Find Your <span style={{ color: "var(--primary-2)" }}>Dream</span><br />Engineering College</h1>
             <p className="muted" style={{ marginTop: 20, fontSize: 18, maxWidth: 520 }}>
               Compare 100+ colleges in seconds. Book a free expert session today and walk in with clarity, not confusion.
