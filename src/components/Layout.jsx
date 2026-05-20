@@ -22,24 +22,32 @@ export function Navbar() {
   return (
     <header className="nav">
       <div className="nav-inner">
-        <a href="#home" onClick={scrollTo("home", () => setOpen(false))} className="logo">
-          <span className="logo-icon"><Compass size={18} color="#fff" /></span>
-          CareerCompass
-        </a>
-        <nav className={`nav-links ${open ? "nav-links-open" : ""}`}>
-          {NAV.map(([id, label]) => (
-            <a key={id} href={`#${id}`} onClick={scrollTo(id, () => setOpen(false))}>{label}</a>
-          ))}
-          <a href="#book" onClick={scrollTo("book", () => setOpen(false))} className="btn-primary nav-cta nav-cta-mobile">Book Free Session</a>
-        </nav>
-        <a href="#book" onClick={scrollTo("book")} className="btn-primary nav-cta nav-cta-desktop">Book Free Session</a>
         <button className="nav-burger" aria-label="Toggle menu" onClick={() => setOpen(o => !o)}>
           {open ? <X size={22} /> : <Menu size={22} />}
         </button>
+        <a href="#home" onClick={scrollTo("home", () => setOpen(false))} className="logo nav-logo">
+          <span className="logo-icon"><Compass size={18} color="#fff" /></span>
+          CareerCompass
+        </a>
+        <nav className="nav-links-desktop">
+          {NAV.map(([id, label]) => (
+            <a key={id} href={`#${id}`} onClick={scrollTo(id)}>{label}</a>
+          ))}
+        </nav>
+        <a href="#book" onClick={scrollTo("book")} className="btn-primary nav-cta">Book</a>
       </div>
+      {open && (
+        <div className="nav-drawer">
+          {NAV.map(([id, label]) => (
+            <a key={id} href={`#${id}`} onClick={scrollTo(id, () => setOpen(false))}>{label}</a>
+          ))}
+          <a href="#book" onClick={scrollTo("book", () => setOpen(false))} className="btn-primary" style={{ justifyContent: "center", marginTop: 8 }}>Book Free Session</a>
+        </div>
+      )}
     </header>
   );
 }
+
 
 export function Footer() {
   return (
