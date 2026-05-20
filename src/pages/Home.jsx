@@ -52,31 +52,6 @@ export default function Home() {
         </div>
       </section>
 
-      <section className="container" style={{ padding: "80px 24px" }}>
-        <h2 className="h2" style={{ textAlign: "center" }}>Students Who Found Their College with Us</h2>
-        <p className="muted" style={{ textAlign: "center", marginTop: 12 }}>Real stories from students just like you.</p>
-        <div className="grid" style={{ marginTop: 48, gridTemplateColumns: "repeat(auto-fit, minmax(280px, 1fr))" }}>
-          {testimonials.map(t => (
-            <div key={t.name} className="card">
-              <div style={{ display: "flex", alignItems: "center", gap: 12 }}>
-                <div style={{ width: 44, height: 44, borderRadius: "50%", background: "linear-gradient(135deg, var(--primary), var(--primary-2))", display: "grid", placeItems: "center", fontWeight: 700 }}>
-                  {t.name.split(" ").map(s => s[0]).join("")}
-                </div>
-                <div>
-                  <div style={{ fontWeight: 600 }}>{t.name}</div>
-                  <div className="muted" style={{ fontSize: 12 }}>{t.college}</div>
-                </div>
-              </div>
-              <div style={{ display: "flex", gap: 2, marginTop: 12 }}>
-                {Array.from({ length: 5 }).map((_, i) => (
-                  <Star key={i} size={16} fill={i < t.stars ? "#f59e0b" : "none"} color={i < t.stars ? "#f59e0b" : "#444"} />
-                ))}
-              </div>
-              <p className="muted" style={{ marginTop: 16, fontSize: 14 }}>"{t.quote}"</p>
-            </div>
-          ))}
-        </div>
-      </section>
     </>
   );
 }
