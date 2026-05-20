@@ -126,20 +126,23 @@ const TESTIMONIALS = [
 ];
 
 export function Testimonials() {
+  const loop = [...TESTIMONIALS, ...TESTIMONIALS];
   return (
-    <section style={{ background: "linear-gradient(180deg, transparent, rgba(79,124,255,.04), transparent)", padding: "100px 0" }}>
+    <section style={{ background: "linear-gradient(180deg, transparent, rgba(79,124,255,.04), transparent)", padding: "100px 0", overflow: "hidden" }}>
       <div className="container">
         <div style={{ textAlign: "center", maxWidth: 640, margin: "0 auto" }}>
           <span className="tag tag-primary">TESTIMONIALS</span>
           <h2 className="h2" style={{ marginTop: 16 }}>Students who found their college with us</h2>
           <p className="muted" style={{ marginTop: 12 }}>Real stories. Real admits. Real students.</p>
         </div>
-        <div className="grid" style={{ gridTemplateColumns: "repeat(auto-fit,minmax(300px,1fr))", marginTop: 56 }}>
-          {TESTIMONIALS.map(t => (
-            <div key={t.name} className="card">
+      </div>
+      <div className="marquee" style={{ marginTop: 56 }}>
+        <div className="marquee-track">
+          {loop.map((t, i) => (
+            <div key={i} className="card marquee-card">
               <div style={{ display: "flex", gap: 2 }}>
-                {Array.from({ length: 5 }).map((_, i) => (
-                  <Star key={i} size={14} fill={i < t.stars ? "#f59e0b" : "none"} color={i < t.stars ? "#f59e0b" : "#444"} />
+                {Array.from({ length: 5 }).map((_, j) => (
+                  <Star key={j} size={14} fill={j < t.stars ? "#f59e0b" : "none"} color={j < t.stars ? "#f59e0b" : "#444"} />
                 ))}
               </div>
               <p style={{ marginTop: 14, fontSize: 14, lineHeight: 1.6 }}>"{t.quote}"</p>
