@@ -97,6 +97,9 @@ label { display: block; font-size: 12px; color: var(--muted); margin-bottom: 6px
   .match-stats { gap: 8px; }
   .match-stats > div { padding: 10px 6px !important; }
   .match-stats > div > div:last-child { font-size: 16px !important; }
+  section[style*="padding: 100px 0"] { padding: 48px 0 !important; }
+  section[style*="padding: 100px 24px"] { padding: 48px 16px !important; }
+  .hero { padding: 28px 0 36px !important; }
 }
 @media (max-width: 380px) {
   .h1 { font-size: 28px; }
