@@ -46,7 +46,9 @@ export function Footer() {
         <div>
           <h4 style={{ color: "var(--muted)", margin: "0 0 14px", fontSize: 11, letterSpacing: ".2em" }}>QUICK LINKS</h4>
           <div style={{ display: "grid", gap: 10, fontSize: 14 }}>
-            <a href="#home" onClick={scrollTo("home")}>Home</a>
+            <a href="#about" onClick={scrollTo("about")}>About</a>
+            <a href="#services" onClick={scrollTo("services")}>Services</a>
+            <a href="#projects" onClick={scrollTo("projects")}>Projects</a>
             <a href="#compare" onClick={scrollTo("compare")}>Compare</a>
             <a href="#book" onClick={scrollTo("book")}>Book Session</a>
           </div>
