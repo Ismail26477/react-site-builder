@@ -84,18 +84,26 @@ label { display: block; font-size: 12px; color: var(--muted); margin-bottom: 6px
   .card { padding: 18px; }
   .footer-grid { grid-template-columns: 1fr !important; gap: 24px !important; }
   .stat { padding: 14px 6px; }
-  .stat-v { font-size: 24px; }
+  .stat-v { font-size: 22px; }
   .stat-l { font-size: 9px; }
   .book-grid { grid-template-columns: 1fr !important; }
   .h1 + .muted, .h2 + .muted { font-size: 15px; }
   .about-grid { grid-template-columns: 1fr !important; gap: 32px !important; }
   .marquee-card { width: 280px; }
   .btn-primary, .btn-outline { padding: 12px 20px; font-size: 14px; }
+  .nav-cta { padding: 8px 14px !important; font-size: 13px !important; }
+  .match-stats { gap: 8px; }
+  .match-stats > div { padding: 10px 6px !important; }
+  .match-stats > div > div:last-child { font-size: 16px !important; }
 }
-@media (max-width: 480px) {
-  .hero .container .card > [style*="repeat(3, 1fr)"] { grid-template-columns: repeat(3, 1fr) !important; gap: 8px; }
-  .hero .container .card > [style*="repeat(3, 1fr)"] > div { padding: 10px !important; }
-  .hero .container .card > [style*="repeat(3, 1fr)"] [style*="font-size: 22px"] { font-size: 16px !important; }
+@media (max-width: 380px) {
+  .h1 { font-size: 28px; }
+  .nav-cta { padding: 7px 12px !important; font-size: 12px !important; }
+  .nav-inner { padding: 12px 12px; gap: 8px; }
+  .logo { font-size: 13px; }
+  .logo-icon { width: 28px; height: 28px; }
+  .match-stats > div > div:last-child { font-size: 14px !important; }
+  .stat-v { font-size: 19px; }
 }
 .service-card, .project-card { transition: transform .2s ease, border-color .2s ease; }
 .service-card:hover, .project-card:hover { transform: translateY(-4px); border-color: rgba(122,162,255,.5); }
