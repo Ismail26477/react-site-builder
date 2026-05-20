@@ -19,7 +19,11 @@ export function Navbar() {
         </a>
         <nav className="nav-links">
           <a href="#home" onClick={scrollTo("home")}>Home</a>
+          <a href="#about" onClick={scrollTo("about")}>About</a>
+          <a href="#services" onClick={scrollTo("services")}>Services</a>
+          <a href="#projects" onClick={scrollTo("projects")}>Projects</a>
           <a href="#compare" onClick={scrollTo("compare")}>Compare</a>
+          <a href="#testimonials" onClick={scrollTo("testimonials")}>Reviews</a>
           <a href="#book" onClick={scrollTo("book")}>Book</a>
         </nav>
         <a href="#book" onClick={scrollTo("book")} className="btn-primary nav-cta">Book Free Session</a>
