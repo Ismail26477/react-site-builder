@@ -66,7 +66,11 @@ label { display: block; font-size: 12px; color: var(--muted); margin-bottom: 6px
   .stat-v { font-size: 28px; }
   .book-grid { grid-template-columns: 1fr !important; }
   .h1 + .muted, .h2 + .muted { font-size: 15px; }
+  .about-grid { grid-template-columns: 1fr !important; gap: 32px !important; }
+  .nav-links { flex-wrap: wrap; }
 }
+.service-card, .project-card { transition: transform .2s ease, border-color .2s ease; }
+.service-card:hover, .project-card:hover { transform: translateY(-4px); border-color: rgba(122,162,255,.5); }
 .footer-grid { display: grid; gap: 32px; grid-template-columns: 1.2fr 1fr 1.4fr; }
 .nav-links { display: flex; gap: 4px; }
 .book-grid { margin-top: 40px; display: grid; gap: 24px; grid-template-columns: 2fr 1fr; }
