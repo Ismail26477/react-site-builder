@@ -28,7 +28,8 @@ main { flex: 1; }
 .grid { display: grid; gap: 20px; }
 .nav { position: sticky; top: 0; z-index: 50; background: rgba(10,18,40,.85); backdrop-filter: blur(10px); border-bottom: 1px solid var(--border); }
 .nav-inner { display: flex; align-items: center; gap: 12px; padding: 14px 24px; max-width: 1200px; margin: 0 auto; }
-.nav a { padding: 8px 14px; border-radius: 8px; color: var(--muted); }
+.nav a:not(.btn-primary):not(.logo) { padding: 8px 14px; border-radius: 8px; color: var(--muted); }
+.nav .btn-primary { color: #fff; }
 .nav a.active, .nav a:hover { color: var(--text); background: rgba(79,124,255,.12); }
 .logo { display: flex; align-items: center; gap: 10px; font-weight: 700; }
 .logo-icon { width: 32px; height: 32px; border-radius: 8px; background: linear-gradient(135deg, var(--primary), var(--primary-2)); display: grid; place-items: center; }
